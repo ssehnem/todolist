@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Merriweather', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Times, sans-serif;
   background-color: white;
-  color: #333;
+  color: #491212;
 }
 
 .home {
@@ -16,8 +16,9 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
-h2 {
+h1 {
   margin-bottom: 20px;
+  font-family: Times;
 }
 
 .create_form {
@@ -56,4 +57,39 @@ h2 {
   margin-bottom: 10px;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  width: 345px;
+  justify-content: space-between;
+  background-color: #491212;
+  color: white;
+  height: 35px;
+  padding: 2px 5px 2px 5px;
+  margin-top: 2px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.line_through {
+  text-decoration: line-through;
+  color: #d3d3d3;
+}
+
+.checkbox .icon {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.task div span {
+  margin: 0px 5px 0px 4px;
+}
+
+.task div .icon {
+  cursor: pointer;
 }
