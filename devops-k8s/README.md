@@ -13,17 +13,14 @@ Esse projeto foi desenvolvido como trabalho final da disciplina **Fundamentos de
 # ⚙️ Como rodar
 
 ### 1. Subir o cluster com Kind
-```bash
 kind create cluster --name mern-cluster --config kind-config.yaml
 
 ### 2. Aplicar os manifests no cluster
-```bash
 kubectl apply -f manifests/backend/
 kubectl apply -f manifests/frontend/
 kubectl apply -f manifests/mongo/
 
 ### 3. Instalar o ArgoCD
-```bash
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 kubectl -n argocd port-forward svc/argocd-server 8080:443
