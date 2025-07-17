@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://mongo:27017/todolist')
+mongoose.connect('mongodb://mongo-service:27017/todolist')
 
 app.get('/get', (req, res) => {
     TodoModel.find()
