@@ -44,7 +44,7 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>To-do List</h1>
+      <h1>Lista de Tarefas</h1>
       <br />
       <Create API_URL={API_URL} onTaskAdded={fetchTodos} />
       {
