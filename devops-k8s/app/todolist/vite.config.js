@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { builtinModules } from 'module';
+
+const builtinModules = [
+  'fs', 'path', 'url', 'fsevents', 'module'
+];
+
 
 const nodeBuiltins = [
   ...builtinModules,
