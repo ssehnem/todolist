@@ -7,7 +7,7 @@ import { BsCircleFill, BsFillTrashFill, BsFillCheckCircleFill } from 'react-icon
 function Home() {
   const [todos, setTodos] = useState([]);
 
-  const API_URL = 'http://backend-service:3001';
+  const API_URL = 'http://localhost:3001';
 
 
   useEffect(() => {
