@@ -1,14 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: todolist-app
+  name: todolist-deploy
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/ssehnem/todolist.git
     targetRevision: HEAD
-    path: gitops-k8s/
+    path: devops-k8s/manifests/
+    directory:
+      exclude: '{package.json,README.md, Dockerfile}'
   destination:
     server: https://kubernetes.default.svc
     namespace: default
