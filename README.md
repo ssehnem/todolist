@@ -15,24 +15,24 @@ Esse projeto foi desenvolvido como trabalho final da disciplina **Fundamentos de
 
 ## ⚙️ Como rodar localmente
 
-# Clonar o repositório
+### Clonar o repositório
 git clone https://github.com/ssehnem/todolist.git
 
-# Entrar na pasta do projeto
+### Entrar na pasta do projeto
 cd devops-k8s/
 
-# Construir as imagens
+### Construir as imagens
 docker build -t ssehnem/mern-frontend:v1.0 .
 docker build -t ssehnem/mern-backend:v1.0 .
 
-# Deploy com Kubernetes
+### Deploy com Kubernetes
 kubectl apply -f k8s/
 
-# Port-forward para acessar frontend e backend localmente
+### Port-forward para acessar frontend e backend localmente
 kubectl port-forward svc/frontend-service 3000:80
 kubectl port-forward svc/backend-service 3001:3001
 
-# Acessar a aplicação:
+### Acessar a aplicação:
 http://localhost:3000
 
 
