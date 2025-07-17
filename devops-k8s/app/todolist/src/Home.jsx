@@ -35,7 +35,7 @@ function Home() {
     <div className="home">
       <h1>To-do List</h1>
       <br />
-      <Create />
+      <Create API_URL={API_URL} />
       {
         todos.length === 0 
         ? <div><h4>Nenhuma tarefa pendente</h4></div>
