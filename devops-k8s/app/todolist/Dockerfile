@@ -1,6 +1,6 @@
-FROM node:20-alpine AS build 
+FROM node:18-bullseye AS build 
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install
 COPY . .
 RUN npm run build

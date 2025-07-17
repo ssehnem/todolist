@@ -1,0 +1,10 @@
+diff --git a/node_modules/node-stdlib-browser/esm/mock/empty.js b/node_modules/node-stdlib-browser/esm/mock/empty.js
+index 4bf4979..611db42 100644
+--- a/node_modules/node-stdlib-browser/esm/mock/empty.js
++++ b/node_modules/node-stdlib-browser/esm/mock/empty.js
+@@ -2,3 +2,5 @@ var empty = null;
+ 
+ export { empty as default };
+ //# sourceMappingURL=empty.js.map
++
++export const promises = {};
