@@ -4,17 +4,24 @@ import axios from 'axios';
 function Create({ API_URL, onTaskAdded }) {
   const [task, setTask] = useState("");
 
-  const handleAdd = () => {
+  const handleAdd = async () => {
     if (!task.trim()) return;
 
-    axios.post(`${API_URL}/add`, { task })
-      .then(() => {
-        setTask(""); // limpa campo
-        if (typeof onTaskAdded === "function") {
-          onTaskAdded(); // atualiza lista no Home
+    try {
+      const response = await axios.post(`${API_URL}/add`, { task }, {
+        headers: {
+          'Content-Type': 'application/json'
         }
-      })
-      .catch(err => console.log("Erro ao adicionar tarefa:", err));
+      });
+
+      console.log("Resposta do backend:", response.data);
+      setTask("");
+      if (typeof onTaskAdded === "function") {
+        onTaskAdded();
+      }
+    } catch (err) {
+      console.error("Erro ao adicionar tarefa:", err);
+    }
   };
 
   return (
