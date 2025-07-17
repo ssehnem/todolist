@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Create({ API_URL }) {
+function Create(props) {
   const [task, setTask] = useState("");
 
   const handleAdd = () => {
     if (!task.trim()) return;
+    console.log("Adicionando tarefa:", task);
 
-    axios.post(`${API_URL}/add`, { task })
+    axios.post(`${props.API_URL}/add`, { task })
       .then(() => {
         setTask("");
+        props.onTaskAdded?.();
       })
       .catch(err => console.log("Erro ao adicionar:", err));
   };
