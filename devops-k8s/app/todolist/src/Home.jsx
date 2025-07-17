@@ -9,11 +9,15 @@ function Home() {
 
   const API_URL = 'http://backend-service:3001';
 
+
   useEffect(() => {
-    axios.get(`${API_URL}/get`)
-      .then(result => setTodos(result.data))
-      .catch(err => console.log(err));
-  }, []);
+  axios.get(`${API_URL}/get`)
+    .then(result => {
+      console.log("Dados recebidos:", result.data);
+      setTodos(result.data);
+    })
+    .catch(err => console.log(err));
+}, []);
 
   const handleEdit = (id) => {
     axios.put(`${API_URL}/update/${id}`)

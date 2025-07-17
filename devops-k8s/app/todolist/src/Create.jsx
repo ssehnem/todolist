@@ -10,7 +10,6 @@ function Create({ API_URL }) {
     axios.post(`${API_URL}/add`, { task })
       .then(() => {
         setTask("");
-        location.reload();
       })
       .catch(err => console.log("Erro ao adicionar:", err));
   };
