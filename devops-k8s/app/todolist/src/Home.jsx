@@ -11,6 +11,7 @@ function Home() {
 
 
   useEffect(() => {
+  fetchTodos();
   axios.get(`${API_URL}/get`)
     .then(result => {
       console.log("Dados recebidos:", result.data);
@@ -35,11 +36,17 @@ function Home() {
       .catch(err => console.log(err));
   };
 
+  const fetchTodos = () => {
+  axios.get(`${API_URL}/get`)
+    .then(result => setTodos(result.data))
+    .catch(err => console.log(err));
+};
+
   return (
     <div className="home">
       <h1>To-do List</h1>
       <br />
-      <Create API_URL={API_URL} />
+      <Create API_URL={API_URL} onTaskAdded={fetchTodos} />
       {
         todos.length === 0 
         ? <div><h4>Nenhuma tarefa pendente</h4></div>
