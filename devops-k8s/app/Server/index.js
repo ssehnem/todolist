@@ -37,6 +37,6 @@ app.post('/add', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
+app.listen(3001, '0.0.0.0', () => {
     console.log('Servidor rodando')
 })
