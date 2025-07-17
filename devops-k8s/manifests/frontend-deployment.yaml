@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ssehnem/mern-frontend:latest
+          image: ssehnem/mern-frontend:v1.0.1
           ports:
             - containerPort: 80
