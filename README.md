@@ -64,4 +64,4 @@ O Terraform me ajudou a automatizar a criação do cluster e a estrutura do proj
 
 
 # 🎓 Créditos
-Feito com ❤️ por Sara, devops raiz que enfrentou o backend às 5 da manhã e não desistiu.
+Feito com ❤️ por Sara de Almeida Sehnem
